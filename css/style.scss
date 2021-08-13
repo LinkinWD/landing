@@ -120,8 +120,7 @@ nav {
 
 header {
     position: relative;
-    height: 90vh;
-   
+    
    .navlinks {
     opacity: .8;
      width: 50%;
@@ -166,4 +165,22 @@ header {
       transition: 1 all;
       
    }
+}
+/* galleria osuus alkaa tästä */
+h2 {
+  text-align: center;
+}
+.slider {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    width: 80%;;
+  }
+  i {
+    font-size: 1.5rem;
+    padding: 2px;
+  }
 }

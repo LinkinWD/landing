@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -108,7 +109,6 @@ nav #hamppari.avaa span:nth-child(6) {
 
 header {
   position: relative;
-  height: 90vh;
 }
 
 header .navlinks {
@@ -151,10 +151,35 @@ header img {
 }
 
 header .omanimi {
-  display: inline-block;
   text-align: center;
   color: blueviolet;
   -webkit-transition: 1 all;
   transition: 1 all;
+}
+
+/* galleria osuus alkaa tästä */
+h2 {
+  text-align: center;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider img {
+  width: 80%;
+}
+
+.slider i {
+  font-size: 1.5rem;
+  padding: 2px;
 }
 /*# sourceMappingURL=style.css.map */
