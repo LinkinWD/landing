@@ -151,6 +151,13 @@ header {
     transform: translateX(0px);
 
 }
+video {
+  width: 100%;
+}
+}
+section #mina {
+  
+}
     img {
         width: 100%;
         max-width: 375px;
@@ -165,11 +172,15 @@ header {
       transition: 1 all;
       
    }
-}
+
+ 
+   
 /* galleria osuus alkaa tästä */
 h2 {
   text-align: center;
 }
+
+
 .slider {
   
   display: flex;
