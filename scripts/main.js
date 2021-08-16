@@ -1,4 +1,6 @@
 
+var controller = new ScrollMagic.Controller();
+
 const hamppari = document.querySelector('#hamppari');
 const navlinks = document.querySelector('.navlinks');
 const slider = document.querySelector('.slider')
@@ -45,9 +47,9 @@ edellinen.addEventListener('click', ()=> {
    }  
 })
 
-anime ({
-    targets: '.omanimi',
-    translateY:-60,
-    
-    duration: 1500 
+const scene = new ScrollMagic.Scene ({
+    triggerElement: "#laukasin"
 })
+.setTween("#omanimi", 0.5,  {scale: 2})
+.addIndicators({name: "1 (duration: 0)"})
+.addTo(controller)

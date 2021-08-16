@@ -151,12 +151,17 @@ header {
     transform: translateX(0px);
 
 }
-video {
-  width: 100%;
+.overlay {
+  
+  video {
+    
+    width: 100%;
+  }
 }
+
 }
 section #mina {
-  
+  background: red;
 }
     img {
         width: 100%;
@@ -164,11 +169,11 @@ section #mina {
         max-height: 400px;
         
     }
-   .omanimi {
+   #omanimi {
        
        text-align: center;
       color: blueviolet;
-      
+      transform: scale(0.5);
       transition: 1 all;
       
    }

@@ -144,8 +144,12 @@ header .navlinks.aukea {
           transform: translateX(0px);
 }
 
-header video {
+header .overlay video {
   width: 100%;
+}
+
+section #mina {
+  background: red;
 }
 
 img {
@@ -154,9 +158,11 @@ img {
   max-height: 400px;
 }
 
-.omanimi {
+#omanimi {
   text-align: center;
   color: blueviolet;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
   -webkit-transition: 1 all;
   transition: 1 all;
 }
