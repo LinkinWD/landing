@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 nav {
@@ -160,25 +161,34 @@ header {
 }
 
 }
-section #mina {
-  background: red;
+
+.anime {
+  transform: scale(0);
 }
-    img {
+#mina {
+  background: red;
+  position: relative;
+  width: 100%;
+  
+}
+    #omakuva {
         width: 100%;
         max-width: 375px;
         max-height: 400px;
+        transition: all 1s;
         
     }
+    
    #omanimi {
        
        text-align: center;
       color: blueviolet;
-      transform: scale(0.5);
+      
       transition: 1 all;
       
    }
 
- 
+
    
 /* galleria osuus alkaa tästä */
 h2 {

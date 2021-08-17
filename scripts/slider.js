@@ -1,5 +1,5 @@
 
-var controller = new ScrollMagic.Controller();
+
 
 const hamppari = document.querySelector('#hamppari');
 const navlinks = document.querySelector('.navlinks');
@@ -16,6 +16,8 @@ const slides = [
     'img/slide3.jpg',
     'img/slide4.jpg'
 ]
+
+
 
 sliderinKuva.src = slides[dia]
 
@@ -47,9 +49,3 @@ edellinen.addEventListener('click', ()=> {
    }  
 })
 
-const scene = new ScrollMagic.Scene ({
-    triggerElement: "#laukasin"
-})
-.setTween("#omanimi", 0.5,  {scale: 2})
-.addIndicators({name: "1 (duration: 0)"})
-.addTo(controller)
