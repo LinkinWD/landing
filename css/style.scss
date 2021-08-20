@@ -1,3 +1,9 @@
+@mixin flexit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -192,7 +198,7 @@ header {
   flex-direction: column;
   justify-content: center;
   
-  margin-top: 200px;
+  
   padding: 2em;
 
         .mina {
@@ -216,7 +222,10 @@ header {
 
    
 /* galleria osuus alkaa tästä */
-h2 {
+#galleria {
+
+
+h2, p {
   text-align: center;
   margin-bottom: 2em;
 }
@@ -224,9 +233,7 @@ h2 {
 
 .slider {
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexit();
   margin-bottom: 7em;
   img {
     width: 50%;
@@ -236,6 +243,21 @@ h2 {
   i {
     font-size: 2rem;
     padding: 1em;
+  }
+}
+}
+/*Projekti osuus */
+#projektit {
+  .duunit {
+  @include flexit();
+  flex-wrap: wrap;
+  div {
+    margin: 30px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+  }
   }
 }
 

@@ -1,3 +1,7 @@
+AOS.init({
+    duration: 1200,
+  })
+
 anime({
     targets: '.nuoli',
     keyframes: [
@@ -11,35 +15,3 @@ anime({
   });
 
 
-var controller = new ScrollMagic.Controller();
-
-var scene = new ScrollMagic.Scene({
-    triggerElement: "#omaesittely",
-    triggerHook: "onEnter"
-})
-.setTween(" #omaesittely",  { scale: 1.2, top: "-200px"})
-.addTo(controller);
-var scene = new ScrollMagic.Scene({
-    triggerElement: "#omaesittely",
-    triggerHook: "onLeave"
-})
-.setTween(" #omaesittely", 0.2, { scale: 1, top: "0px"})
-.addTo(controller);
-
-
-
-
-var scene = new ScrollMagic.Scene({
-    triggerElement: "#galleria",
-    triggerHook: "onEnter"
-})
-.setTween(" #galleria", 0.4, { scale: 1.2})
-.addTo(controller);
-
-
-var scene = new ScrollMagic.Scene({
-    triggerElement: "#galleria",
-    triggerHook: "onLeave"
-})
-.setTween(" #galleria", 0.4, { scale: 1})
-.addTo(controller);
