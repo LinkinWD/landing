@@ -325,10 +325,10 @@ header #headerosuus button a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: brown;
   padding: 15px;
   width: 280px;
   border-radius: 10px;
+  display: inline-block;
 }
 
 #yhteystiedot .otayhteytta input, #yhteystiedot .otayhteytta textarea {
@@ -342,10 +342,22 @@ header #headerosuus button a {
 }
 
 #yhteystiedot .otayhteytta label {
+  /* order: -1; */
   position: absolute;
   font-size: 1.1rem;
-  -webkit-transform: translate(40px, -37px);
-          transform: translate(40px, -37px);
+  -webkit-transform: translate(40px, -37px) scale(0.8);
+          transform: translate(40px, -37px) scale(0.8);
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+#yhteystiedot .otayhteytta input:focus {
+  border-bottom: 2px solid black;
+}
+
+#yhteystiedot .otayhteytta input:focus ~ label {
+  -webkit-transform: translate(70px, -70px);
+          transform: translate(70px, -70px);
 }
 
 /* footer osuus */
