@@ -6,14 +6,21 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background: #c8c8c4;
   width: 100vw;
-  overflow-x: hidden;
 }
 
 nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,27 +28,33 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px 30px;
-  background-color: black;
+  background-color: #cecece;
   color: white;
   /* hamppari */
 }
 
+nav img {
+  height: 40px;
+  width: 40px;
+}
+
 nav #hamppari {
-  width: 20px;
-  height: 15px;
+  width: 30px;
+  height: 25px;
   position: relative;
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
 nav #hamppari span {
   display: block;
   position: absolute;
-  height: 3px;
+  height: 5px;
   width: 50%;
   background: black;
   opacity: 1;
@@ -67,11 +80,11 @@ nav #hamppari span:nth-child(1), nav #hamppari span:nth-child(2) {
 }
 
 nav #hamppari span:nth-child(3), nav #hamppari span:nth-child(4) {
-  top: 6px;
+  top: 9px;
 }
 
 nav #hamppari span:nth-child(5), nav #hamppari span:nth-child(6) {
-  top: 12px;
+  top: 18px;
 }
 
 nav #hamppari.avaa span:nth-child(1), nav #hamppari.avaa span:nth-child(6) {
@@ -114,20 +127,12 @@ nav #hamppari.avaa span:nth-child(6) {
   top: 8px;
 }
 
-/* Header osuus alkaaa */
-header {
-  position: relative;
-  height: 100vh;
-  background-color: lightgray;
-  /* header */
-}
-
-header .navlinks {
+.navlinks {
   z-index: 100;
   opacity: .8;
   width: 50%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   background-color: white;
   right: 0;
   -webkit-transition: 0.5s all;
@@ -136,27 +141,34 @@ header .navlinks {
           transform: translateX(100%);
 }
 
-header .navlinks ul li {
+.navlinks ul li {
   padding: 15px 0px;
   text-align: center;
   list-style: none;
 }
 
-header .navlinks ul li:first-child {
+.navlinks ul li:first-child {
   margin-top: 20px;
 }
 
-header .navlinks ul li a {
+.navlinks ul li a {
   text-decoration: none;
   color: black;
 }
 
-header .navlinks.aukea {
+.navlinks.aukea {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
 }
 
-header .headerosuus {
+/* Header osuus alkaaa */
+header {
+  position: relative;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+header #headerosuus {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -175,16 +187,33 @@ header .headerosuus {
   background: linear-gradient(white 10%, #c8c8c4 100%);
 }
 
-header .headerosuus h1 {
+header #headerosuus h1 {
+  text-align: center;
   font-size: 2rem;
 }
 
-header .headerosuus h3 {
+header #headerosuus h3 {
   font-size: 2rem;
+  text-align: center;
 }
 
-header .headerosuus i {
+header #headerosuus i {
   font-size: 5rem;
+}
+
+header #headerosuus button {
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 1em;
+  padding: 20px 10px;
+  border-radius: 999px;
+}
+
+header #headerosuus button a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 #omaesittely {
@@ -274,6 +303,49 @@ header .headerosuus i {
 #projektit .duunit img {
   width: 200px;
   height: 200px;
+}
+
+/* yhteystiedot osuus */
+#yhteystiedot {
+  position: relative;
+  height: 100vh;
+}
+
+#yhteystiedot .socialmedia {
+  font-size: 3rem;
+}
+
+#yhteystiedot .socialmedia i {
+  color: black;
+}
+
+#yhteystiedot .otayhteytta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: brown;
+  padding: 15px;
+  width: 280px;
+  border-radius: 10px;
+}
+
+#yhteystiedot .otayhteytta input, #yhteystiedot .otayhteytta textarea {
+  padding: 5px;
+  font-size: 1.1rem;
+  margin: 10px;
+  width: auto;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+#yhteystiedot .otayhteytta label {
+  position: absolute;
+  font-size: 1.1rem;
+  -webkit-transform: translate(40px, -37px);
+          transform: translate(40px, -37px);
 }
 
 /* footer osuus */

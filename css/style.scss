@@ -9,23 +9,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'Roboto', sans-serif;
     background:  rgba(200, 200, 196, 1);
     width: 100vw;
-    overflow-x: hidden;
+   
+    
 }
 
 nav {
+     position: sticky;
+     top: 0;
+     z-index: 100;
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
-    background-color: black;
+    background-color: rgb(206, 206, 206);
     color: white;
+    img {
+      height: 40px;
+      width:  40px;
+    }
+    
+     
     /* hamppari */
      #hamppari  {
-        width: 20px;
-        height: 15px;
+        width: 30px;
+        height: 25px;
         position: relative;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -36,14 +49,14 @@ nav {
         -o-transition: .5s ease-in-out;
         transition: .5s ease-in-out;
         cursor: pointer;
-        
+        margin-top: 10px;
         margin-left: 10px;
       }
       
       #hamppari span {
         display: block;
         position: absolute;
-        height: 3px;
+        height: 5px;
         width: 50%;
         background: black;
         opacity: 1;
@@ -73,11 +86,11 @@ nav {
       }
       
       #hamppari span:nth-child(3), #hamppari span:nth-child(4) {
-        top: 6px;
+        top: 9px;
       }
       
       #hamppari span:nth-child(5), #hamppari span:nth-child(6) {
-        top: 12px;
+        top: 18px;
       }
       
       #hamppari.avaa span:nth-child(1),#hamppari.avaa span:nth-child(6) {
@@ -123,52 +136,48 @@ nav {
         left: calc(50% - 5px);
         top: 8px;
       }
-      
-      
-      
-      
+           
       
 }
 
+.navlinks {
+  z-index: 100;
+ opacity: .8;
+  width: 50%;
+  height: 100%;  
+ position: fixed;
+ background-color: white;
+ right: 0;
+ transition: 0.5s all;
+ transform: translateX(100%);
+ ul {
+       
+  li{
+      padding: 15px 0px;
+      text-align: center;
+      list-style: none;
+      &:first-child {
+          margin-top: 20px;
+      }
+      a {
+          text-decoration: none;
+          color: black;
+      }
+  }
+}   
+}
+.navlinks.aukea {
+  transform: translateX(0px);
+
+}
 /* Header osuus alkaaa */
 header {
     position: relative;
     height: 100vh;
     background-color: lightgray;
-   .navlinks {
-     z-index: 100;
-    opacity: .8;
-     width: 50%;
-     height: 100%;  
-    position: absolute;
-    background-color: white;
-    right: 0;
-    transition: 0.5s all;
-    transform: translateX(100%);
-    
-    ul {
-       
-        li{
-            padding: 15px 0px;
-            text-align: center;
-            list-style: none;
-            &:first-child {
-                margin-top: 20px;
-            }
-            a {
-                text-decoration: none;
-                color: black;
-            }
-        }
-    }   
-   }
-   .navlinks.aukea {
-    transform: translateX(0px);
+   
 
-}
-
-/* header */
-.headerosuus {
+#headerosuus {
   height: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -176,19 +185,33 @@ header {
   flex-direction: column;
   background:linear-gradient( rgba(255, 255, 255, 1) 10%, rgba(200, 200, 196, 1) 100% );
   h1 {
+    text-align: center;
     font-size: 2rem;
   }
   h3 {
     font-size: 2rem;
+    text-align: center;
   }
   
     i {
       font-size: 5rem;
     }
- 
+  
+    button {
+      margin-left: 50%;
+      transform: translateX(-50%);
+    margin-top: 1em;
+    padding: 20px 10px;
+    border-radius: 999px;
+    a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+}
 }
 
-}
 #omaesittely {
   transition: 1s all ease-in-out;
   position: relative;
@@ -260,7 +283,42 @@ h2, p {
   }
   }
 }
-
+/* yhteystiedot osuus */
+#yhteystiedot {
+  position: relative;
+  height: 100vh;
+  .socialmedia {
+    font-size: 3rem;
+    i {
+      color: black;
+    }
+  }
+  .otayhteytta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: brown;
+    padding: 15px;
+    width: 280px;
+    border-radius: 10px;
+    input, textarea {
+      
+      padding: 5px;
+      font-size: 1.1rem;
+      margin: 10px ;
+      width: auto;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+    }
+    label {
+      position: absolute;
+      font-size: 1.1rem;
+      transform: translate(40px,-37px);
+    }
+  }
+}
 /* footer osuus */
 
 footer {

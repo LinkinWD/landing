@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <img src="#" alt="Logo">
+    <nav class="navbar">
+        <img src="img/lin.svg" alt="Logo">
         
         <div id="hamppari">
             <span></span>
@@ -30,27 +30,29 @@
           </div>
 
     </nav>
-    
+    <!-- piilotetut nav links osio -->
+    <div class="navlinks">
+        <ul>
+            
+            <li><a href="#headerosuus">Koti</a></li>
+            <li><a href="#omaesittely" >Tietoja minusta</a></li>
+            <li><a href="#galleria" >Kuva galleria</a></li>
+            <li><a href="#projektit" >Harjoitustöitä</a></li>
+            <li><a href="#yhteystiedot" >Ota yhteyttä</a></li>
+        </ul>
+    </div>
+    <!-- Itse header osuus alkaa tästä -->
     <header>
-        <!-- piilotetut nav links osio -->
-        <div class="navlinks">
-            <ul>
-                <li><a href="#"><b>Koti</b></a></li>
-                <li><a href="#">Koti</a></li>
-                <li><a href="#" >Tietoja minusta</a></li>
-                <li><a href="#" >Kuva galleria</a></li>
-                <li><a href="#" >Harjoitustöitä</a></li>
-                <li><a href="#" >Ota yhteyttä</a></li>
-            </ul>
-        </div>
-        <!-- Itse header osuus alkaa tästä -->
-        <div class="headerosuus">
-            <div>
+        
+        
+        <div id="headerosuus">
+            <div class="otsikko">
                 <h1>Linkin Web Desings</h1>
+                <img src="img/silppu.png" alt="">
             </div>
-            <div>
+            <div class="nappi">
                 <h3>Tervetuloa tutustumaan</h3>
-                <button><a href="#">Harjotuksiini</a></button>
+                <button><a href="#projektit">Harjotuksiini</a></button>
            </div>
            <div>
                 <a href="#"><i class="fas fa-angle-double-down nuoli"></i></a> 
@@ -150,6 +152,22 @@
      <!-- projectit loppuu, yhteystiedot alkaa -->
     <section id="yhteystiedot">
         <h2>Yhteystiedot</h2>
+        <form class="otayhteytta" data-aos="fade-up"  data-aos-duration="3000">
+            <input type="text" id="etunimi" required><br>
+            <label for="etunimi">Etunimi</label><br>
+            <input type="text" id="sukunimi" required><br>
+            <label for="sukunimi">Sukunimi</label><br>
+            <input type="email" id="sähköposti" required><br>
+            <label for="sähköposti" >Sähköposti</label><br>
+            
+            <textarea name="viesti" id="viesti" cols="20" rows="5" placeholder="Viestisi" required></textarea ><br>
+            <input type="submit" value="Lähetä">
+            </form>
+        <div class="socialmedia">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github-square"></i></a>
+        </div>
+
     </section>
     <!-- yhteystiedot loppuu, footer -->
     <footer>
