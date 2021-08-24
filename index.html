@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linkin Web Desings</title>
+    <title>Front-end kehittäjä</title>
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!-- googlefonts -->
@@ -18,7 +18,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <img src="img/lin.svg" alt="Logo">
+        
         
         <div id="hamppari">
             <span></span>
@@ -60,7 +60,7 @@
             </div>
             <div class="nappi">
                 <h2>Tervetuloa tutustumaan</h2>
-                <button><a href="#projektit">Harjotuksiini</a></button>
+                <button class="anime2"><a href="#projektit">Harjotuksiini</a></button>
            </div>
            <div>
                 <a href="#"><i class="fas fa-angle-double-down nuoli"></i></a> 
@@ -105,13 +105,13 @@
                  <img src="img/heroku.jpg" alt="linkki">
             </div>
             <div>
-            <h3><strong>Portfolio Harjoitus</strong></h3>
-            <P><strong>Käytetyt tekniikat</strong></P>
+            <h3><strong>Portfolio Harjoitus</strong></h3><br>
+            <P><strong><u>Käytetyt tekniikat</u></strong></P>
             <ul>
                 <li>NodeJS</li>
                 <li>MongoDB</li>
                 <li>Bootstrap</li>
-            </ul>
+            </ul><br>
             <p>Sijainti: Heroku</p>
             </div>
         </div>
@@ -120,12 +120,12 @@
                 <img src="img/netlify.jpg" alt="linkki">
            </div>
            <div>
-           <h3><strong>Sivu ehdotus</strong></h3>
-           <P><strong>Käytetyt tekniikat</strong></P>
+           <h3><strong>Sivu ehdotus</strong></h3><br>
+           <P><strong><u>Käytetyt tekniikat</u></strong></P>
            <ul>
-               <li>Sass</li>
+               <li>Scss</li>
                <li>bootstrap</li>
-           </ul>
+           </ul><br>
            <p>Sijainti: Netlify</p>
            </div>
         </div>
@@ -134,8 +134,8 @@
                 <img src="#" alt="linkki">
            </div>
            <div>
-           <h3><strong>Jarmon burger</strong></h3>
-           <P><strong>Käytetyt tekniikat</strong></P>
+           <h3><strong>Jarmon burger</strong></h3><br>
+           <P><strong><u>äytetyt tekniikat</u></strong></P>
            <ul>
                <li>PHP</li>
                <li>MySQL</li>
@@ -147,11 +147,12 @@
                 <img src="img/blackjack.jpg" alt="linkki">
            </div>
            <div>
-           <h3><strong>Ventti</strong></h3>
-           <P><strong>Käytetyt tekniikat</strong></P>
+           <h3><strong>Ventti</strong></h3><br>
+           <P><strong><u>Käytetyt tekniikat</u></strong></P>
            <ul>
                <li>Javascript</li>
            </ul>
+          <br>
            <p>Sijainti: Netlify</p>
            </div>
         </div>
@@ -160,7 +161,7 @@
      <!-- projectit loppuu, yhteystiedot alkaa -->
     <section id="yhteystiedot">
         <h2>Yhteystiedot</h2>
-        <form class="otayhteytta" data-aos="fade-up"  data-aos-duration="3000">
+        <form class="otayhteytta" data-aos="fade-up"  data-aos-duration="2000">
            <p>Haluatko jättää viestin?</p>
             <div>
             <input type="text" id="etunimi" required><br>
@@ -173,19 +174,23 @@
             <input type="email" id="sähköposti" required><br>
             <label for="sähköposti" >Sähköposti</label><br>
         </div>
-
-            <textarea name="viesti" id="viesti" cols="20" rows="5" placeholder="Viestisi" required></textarea ><br>
+        
+            <textarea name="viesti" id="viesti" cols="20" rows="5" placeholder="viesti...." required></textarea ><br>
             <input type="submit" value="Lähetä">
             </form>
-        <div class="socialmedia">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github-square"></i></a>
-        </div>
+        
 
     </section>
+    <div class="socialmedia">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github-square"></i></a>
+    </div>
     <!-- yhteystiedot loppuu, footer -->
     <footer>
-        <p>lool</p>
+        <p>Linkin Web Desings</p>
+        <img src="img/lin.svg" alt="logo">
+        <p>email:yaramodesu@gmail.com</p>
+        <p>&copy;Jarmo Lindström</p>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

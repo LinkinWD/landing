@@ -12,7 +12,15 @@ anime.timeline({loop: false})
     opacity: [0,1],
     easing: "easeInOutQuad",
     duration: 2250,
-    delay: (el, i) => 150 * (i+1)
+    delay: (el, i) => 110 * (i+1)
+  });
+
+  anime.timeline({loop:false})
+  .add({
+    targets: '.nappi',
+    scale: ['0', '1'],
+    delay: 2000,
+    duration: 3000
   });
 
 

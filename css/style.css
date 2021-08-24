@@ -12,8 +12,10 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #292E1E;
+  background: #51513D;
   width: 100vw;
+  color: #E3DCC2;
+  line-height: 1.3;
 }
 
 nav {
@@ -24,11 +26,10 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 10px 30px;
-  background-color: #292E1E;
   /* hamppari */
 }
 
@@ -61,7 +62,6 @@ nav #hamppari span {
   transform: rotate(0deg);
   -webkit-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
-  background-color: #9649CB;
 }
 
 nav #hamppari span:nth-child(even) {
@@ -132,7 +132,7 @@ nav #hamppari.avaa span:nth-child(6) {
   width: 50%;
   height: 100%;
   position: fixed;
-  background-color: white;
+  background-color: #1B2021;
   right: 0;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
@@ -152,7 +152,7 @@ nav #hamppari.avaa span:nth-child(6) {
 
 .navlinks ul li a {
   text-decoration: none;
-  color: black;
+  color: #E3DC95;
 }
 
 .navlinks.aukea {
@@ -164,7 +164,8 @@ nav #hamppari.avaa span:nth-child(6) {
 header {
   position: relative;
   height: 100vh;
-  background-color: #eceef8;
+  background: #e3dc95;
+  background: radial-gradient(circle, #e3dc95 8%, #a6a867 58%, #51513d 85%);
 }
 
 header #headerosuus {
@@ -235,6 +236,7 @@ header #headerosuus .drops .drop {
 header #headerosuus .drops h1 {
   z-index: 1;
   font-size: clamp(2.2em, 8vw, 5em);
+  color: #51513D;
 }
 
 header #headerosuus .drops .drop::before {
@@ -272,22 +274,31 @@ header #headerosuus .drops .drop:nth-child(3) {
 }
 
 header #headerosuus i {
-  font-size: 5rem;
+  font-size: 4rem;
+  color: #51513D;
 }
 
-header #headerosuus button {
+header #headerosuus .nappi {
+  color: #51513D;
+  width: 100%;
+}
+
+header #headerosuus .nappi button {
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin-top: 1em;
   padding: 20px 10px;
-  border-radius: 999px;
+  border-radius: 100%;
+  background-color: #51513D;
 }
 
-header #headerosuus button a {
+header #headerosuus .nappi button a {
   font-size: 1.4rem;
   text-decoration: none;
   font-weight: 700;
+  color: #E3DC95;
+  padding: 0 20px;
 }
 
 #omaesittely {
@@ -295,6 +306,7 @@ header #headerosuus button a {
   transition: 1s all ease-in-out;
   position: relative;
   width: 100vw;
+  background-color: #51513D;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,13 +317,13 @@ header #headerosuus button a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #E3DCC2;
   padding: 2em;
 }
 
 #omaesittely .mina {
   font-size: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
-  color: #292E1E;
 }
 
 #omaesittely .mina .omakuva {
@@ -328,6 +340,13 @@ header #headerosuus button a {
 }
 
 /* galleria osuus alkaa tästä */
+#galleria {
+  min-height: 60vh;
+  background: #e3dc95;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e3dc95), to(#51513d));
+  background: linear-gradient(0deg, #e3dc95 0%, #51513d 100%);
+}
+
 #galleria h2, #galleria p {
   text-align: center;
   margin-bottom: 2em;
@@ -347,7 +366,6 @@ header #headerosuus button a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 7em;
 }
 
 #galleria .slider img {
@@ -362,9 +380,17 @@ header #headerosuus button a {
 }
 
 /*Projekti osuus */
+#projektit {
+  margin-top: -3px;
+  background: #E3DC95;
+  color: #51513D;
+}
+
 #projektit h2 {
+  padding: 10px;
   font-size: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
+  color: #51513D;
 }
 
 #projektit .duunit {
@@ -382,7 +408,12 @@ header #headerosuus button a {
 }
 
 #projektit .duunit div {
+  color: #51513D;
   margin: 30px;
+}
+
+#projektit .duunit div li {
+  list-style: none;
 }
 
 #projektit .duunit img {
@@ -392,31 +423,30 @@ header #headerosuus button a {
 
 /* yhteystiedot osuus */
 #yhteystiedot {
+  background-color: #E3DCC2;
   text-align: center;
   position: relative;
   height: 90vh;
 }
 
 #yhteystiedot h2 {
-  margin-bottom: 40px;
+  padding: 20px;
   font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #1B2021;
 }
 
-#yhteystiedot .socialmedia a {
-  font-size: 5rem;
-  margin: 40px;
-}
-
-#yhteystiedot .socialmedia a i {
-  color: black;
+#yhteystiedot p {
+  padding: 0 0 30px 0;
 }
 
 #yhteystiedot .otayhteytta {
   position: absolute;
-  top: 50%;
+  background-color: #51513D;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  height: 500px;
   padding: 15px;
   width: 280px;
   border-radius: 10px;
@@ -439,6 +469,7 @@ header #headerosuus button a {
   font-size: 1.1rem;
   -webkit-transform: translate(-50%, -37px) scale(0.8);
           transform: translate(-50%, -37px) scale(0.8);
+  color: #1B2021;
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
 }
@@ -450,11 +481,58 @@ header #headerosuus button a {
 #yhteystiedot .otayhteytta input:focus ~ label {
   -webkit-transform: translate(-50%, -70px);
           transform: translate(-50%, -70px);
+  color: #E3DC95;
+}
+
+#yhteystiedot .otayhteytta textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+#yhteystiedot .otayhteytta input[type=submit] {
+  padding: 10px 30px;
+  background: #E3DC95;
+  color: #1B2021;
+  border-radius: 10px;
+}
+
+#yhteystiedot .otayhteytta input[type=submit]:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.socialmedia {
+  margin-top: -3px;
+  background-color: #E3DCC2;
+  height: 150px;
+  -webkit-transition: 0.5 all;
+  transition: 0.5 all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socialmedia a {
+  font-size: 4rem;
+  margin: 40px;
+}
+
+.socialmedia a i {
+  color: #51513D;
+}
+
+.socialmedia a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* footer osuus */
 footer {
-  margin-top: 30px;
   color: white;
   background-color: black;
   padding: 20px;

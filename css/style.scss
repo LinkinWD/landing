@@ -3,11 +3,11 @@
   justify-content: center;
   align-items: center;
 }
-$perus-valkoinen: #eceef8;
-$perus-purppura: #7F0799;
-$vaaleempi-sininen: #D3FFF3;
-$vaaleempi-purppura: #9649CB;
-$perus-tumma: #292E1E;
+$harmaa: #E3DCC2;
+$vaalea-vihreä: #E3DC95;
+$vihreä: #A6A867;
+$tumma-vihreä: #51513D;
+$tumma: #1B2021;
 $otsikon-koko : clamp(1.5rem, 3vw, 2rem);
 
 
@@ -21,9 +21,10 @@ html {
 }
 body {
     font-family: 'Roboto', sans-serif;
-    color: $perus-tumma;
+    background: $tumma-vihreä;
     width: 100vw;
-   
+   color: $harmaa;
+   line-height: 1.3;
     
 }
 
@@ -32,9 +33,9 @@ nav {
      top: 0;
      z-index: 100;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 10px 30px;
-    background-color: $perus-tumma;
+   
     
     img {
       height: 40px;
@@ -75,7 +76,7 @@ nav {
         -moz-transition: .25s ease-in-out;
         -o-transition: .25s ease-in-out;
         transition: .25s ease-in-out;
-        background-color: $vaaleempi-purppura;
+        
       }
       
       #hamppari span:nth-child(even) {
@@ -153,12 +154,13 @@ nav {
   width: 50%;
   height: 100%;  
  position: fixed;
- background-color: white;
+ 
+ background-color: $tumma;
  right: 0;
  transition: 0.5s all;
  transform: translateX(100%);
  ul {
-       
+     
   li{
       padding: 15px 0px;
       text-align: center;
@@ -168,7 +170,7 @@ nav {
       }
       a {
           text-decoration: none;
-          color: black;
+          color: $vaalea-vihreä;
       }
   }
 }   
@@ -181,7 +183,8 @@ nav {
 header {
     position: relative;
     height: 100vh;
-    background-color: $perus-valkoinen;
+    background: rgb(227,220,149);
+background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 58%, rgba(81,81,61,1) 85%);
    
 
 #headerosuus {
@@ -231,6 +234,7 @@ header {
     h1 {
       z-index: 1;
       font-size: clamp(2.2em,8vw,5em);
+      color: $tumma-vihreä;
     }
     .drop::before {
       content: '';
@@ -267,21 +271,32 @@ header {
   }
   /* pisarat loppuu */
     i {
-      font-size: 5rem;
+      font-size: 4rem;
+      color: $tumma-vihreä;
     }
-  
+  .nappi {
+    color: $tumma-vihreä;
+    width: 100%;
+    
     button {
       margin-left: 50%;
       transform: translateX(-50%);
     margin-top: 1em;
     padding: 20px 10px;
-    border-radius: 999px;
+    border-radius: 100%;
+    background-color: $tumma-vihreä;
+    ;
+    
     a {
       font-size: 1.4rem;
       text-decoration: none;
       font-weight: 700;
+      color: $vaalea-vihreä;
+      padding: 0 20px;
     }
+    
   }
+}
 }
 }
 
@@ -289,18 +304,18 @@ header {
   transition: 1s all ease-in-out;
   position: relative;
   width: 100vw;
- 
+  background-color: $tumma-vihreä;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+  color: $harmaa;;
   
   padding: 2em;
 
         .mina {
           font-size: $otsikon-koko;
           text-align: center;
-          color: $perus-tumma;
+          
         
         .omakuva {
           max-width: 275px;
@@ -320,7 +335,9 @@ header {
    
 /* galleria osuus alkaa tästä */
 #galleria {
-
+  min-height: 60vh;
+  background: rgb(227,220,149);
+  background: linear-gradient(0deg, rgba(227,220,149,1) 0%, rgba(81,81,61,1) 100%);
 
 h2, p {
   text-align: center;
@@ -335,7 +352,7 @@ h2 {
 .slider {
   
   @include flexit();
-  margin-bottom: 7em;
+  
   img {
     width: 50%;
     border: 5px solid black;
@@ -349,15 +366,24 @@ h2 {
 }
 /*Projekti osuus */
 #projektit {
+  margin-top: -3px;
+  background: $vaalea-vihreä;
+  color: $tumma-vihreä;
   h2 {
+    padding: 10px;
     font-size: $otsikon-koko;
-    text-align: center
+    text-align: center;
+    color: $tumma-vihreä
   }
   .duunit {
   @include flexit();
   flex-wrap: wrap;
   div {
+    color: $tumma-vihreä;
     margin: 30px;
+    li {
+      list-style: none;
+    }
   }
   img {
     width: 200px;
@@ -367,31 +393,31 @@ h2 {
 }
 /* yhteystiedot osuus */
 #yhteystiedot {
+  background-color: $harmaa;
   text-align: center;
   position: relative;
   height: 90vh;
   h2 {
-    margin-bottom: 40px;
+    padding: 20px;
     font-size: $otsikon-koko;
+    color: $tumma;
   }
-  .socialmedia {
-    a{
-    font-size: 5rem;
-    margin: 40px;
-    i {
-      color: black;
-    }}
+  p {
+    padding: 0 0 30px 0;
   }
+ 
   .otayhteytta {
     position: absolute;
-    top: 50%;
+    background-color: $tumma-vihreä;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    height: 500px;
     padding: 15px;
     width: 280px;
     border-radius: 10px;
     display: inline-block;
+    
     input, textarea {
       
       padding: 5px;
@@ -408,7 +434,7 @@ h2 {
       position: absolute;
       font-size: 1.1rem;
       transform: translate(-50%,-37px) scale(0.8);
-
+      color: $tumma;
       transition: all .5s ease-out;
     }
     input:focus {
@@ -416,13 +442,43 @@ h2 {
     }
     input:focus ~ label{
       transform: translate(-50%,-70px);
+      color: $vaalea-vihreä;
     }
+    textarea {
+      font-family: 'Roboto', sans-serif;
+      
+    }
+    input[type=submit] {
+      padding: 10px 30px;
+      background: $vaalea-vihreä;
+      color: $tumma;
+      border-radius: 10px;
+    }
+    input[type=submit]:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.socialmedia {
+  margin-top: -3px;
+  background-color: $harmaa;
+  height: 150px;
+  transition: 0.5 all;
+  @include flexit();
+  a{
+  font-size: 4rem;
+  margin: 40px;
+  i {
+    color: $tumma-vihreä;
+  }}
+  a:hover {
+    transform: scale(1.1);
   }
 }
 /* footer osuus */
 
 footer {
-  margin-top: 30px;
+  
   
   color: white;
   background-color: black;
