@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #c8c8c4;
+  color: #292E1E;
   width: 100vw;
 }
 
@@ -28,8 +28,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px 30px;
-  background-color: #cecece;
-  color: white;
+  background-color: #292E1E;
   /* hamppari */
 }
 
@@ -62,7 +61,7 @@ nav #hamppari span {
   transform: rotate(0deg);
   -webkit-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
-  background-color: white;
+  background-color: #9649CB;
 }
 
 nav #hamppari span:nth-child(even) {
@@ -165,7 +164,7 @@ nav #hamppari.avaa span:nth-child(6) {
 header {
   position: relative;
   height: 100vh;
-  background-color: lightgray;
+  background-color: #eceef8;
 }
 
 header #headerosuus {
@@ -183,18 +182,93 @@ header #headerosuus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), to(#c8c8c4));
-  background: linear-gradient(white 10%, #c8c8c4 100%);
+  /* Pisarat */
+  /* pisarat loppuu */
 }
 
-header #headerosuus h1 {
-  text-align: center;
-  font-size: 2rem;
+header #headerosuus .otsikko {
+  background-color: red;
+  position: relative;
+  height: 100px;
+  margin-bottom: 3em;
 }
 
-header #headerosuus h3 {
-  font-size: 2rem;
+header #headerosuus .otsikko img {
+  position: absolute;
+  z-index: 100;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+header #headerosuus h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
+}
+
+header #headerosuus .drops {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #headerosuus .drops .drop {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 37% 63% 32% 68% / 43% 51% 49% 57%;
+  -webkit-box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(255, 255, 255, 0.05), inset -10px -10px 25px rgba(255, 255, 255, 0.9);
+          box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(255, 255, 255, 0.05), inset -10px -10px 25px rgba(255, 255, 255, 0.9);
+}
+
+header #headerosuus .drops h1 {
+  z-index: 1;
+  font-size: clamp(2.2em, 8vw, 5em);
+}
+
+header #headerosuus .drops .drop::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 72% 28% 43% 57% / 56% 43% 57% 44%;
+}
+
+header #headerosuus .drops .drop::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 65px;
+  background: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 53% 47% 43% 57% / 56% 28% 72% 44%;
+}
+
+header #headerosuus .drops .drop:nth-child(2) {
+  -webkit-transform: scale(0.5) translate(210px, -100px);
+          transform: scale(0.5) translate(210px, -100px);
+  border-radius: 71% 29% 60% 40% / 56% 53% 47% 44%;
+}
+
+header #headerosuus .drops .drop:nth-child(3) {
+  -webkit-transform: scale(0.3) translate(-300px, 150px);
+          transform: scale(0.3) translate(-300px, 150px);
+  border-radius: 35% 65% 40% 60% / 56% 33% 67% 44%;
 }
 
 header #headerosuus i {
@@ -235,9 +309,9 @@ header #headerosuus button a {
 }
 
 #omaesittely .mina {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
-  color: rgba(0, 0, 0, 0.3);
+  color: #292E1E;
 }
 
 #omaesittely .mina .omakuva {
@@ -260,7 +334,7 @@ header #headerosuus button a {
 }
 
 #galleria h2 {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 #galleria .slider {
@@ -289,7 +363,7 @@ header #headerosuus button a {
 
 /*Projekti osuus */
 #projektit h2 {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
 }
 
@@ -325,7 +399,7 @@ header #headerosuus button a {
 
 #yhteystiedot h2 {
   margin-bottom: 40px;
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 #yhteystiedot .socialmedia a {
