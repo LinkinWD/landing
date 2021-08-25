@@ -52,7 +52,7 @@
             </div>
             
             <div class="drops">
-                <h1 class="animoi">Front End Kehittäjä</h1>
+                <h1 class="animoi">Front-end Kehittäjä</h1>
                 
                 <div class="drop"></div>
                 <div class="drop"></div>
@@ -77,7 +77,7 @@
             <img data-aos="fade-up" src="img/omaPärstä.jpg" alt="omakuva" class="omakuva" >
         </div>
         <div data-aos="fade-up" class="kirjoitus">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, velit, libero tempore est repellat maxime neque corrupti sequi maiores minus enim, magnam laudantium sint minima! Voluptate numquam ab qui doloremque sequi doloribus optio laudantium id consectetur voluptates quaerat, necessitatibus minus. Ea placeat dolores quod neque consequuntur qui officiis possimus fugiat pariatur aut at repellat, sapiente ad dolore dicta odio.</p>
+            <p>Tervetuloa sivuilleni. Opiskelen 'ohjelmointi kehittäjä' linjaa ja etsin mahdollisia työssäoppimis paikkoja. Suuntaudun Front-end kehitykseen, mutta kokonaisuuden ymmärtäminen on pakottanut laajentamaan myös muihin osioihin.</p>
         </div>
         
     </section>
@@ -102,10 +102,10 @@
         <div class="duunit">
         <div class="heroku">
             <div>
-                 <img src="img/heroku.jpg" alt="linkki">
+                <a href="https://stormy-shelf-47865.herokuapp.com/" target="_blank"><img src="img/heroku.jpg" alt="SivuHerokussa"></a>  
             </div>
             <div>
-            <h3><strong>Portfolio Harjoitus</strong></h3><br>
+            <h3><strong>Backend portfolio </strong></h3><br>
             <P><strong><u>Käytetyt tekniikat</u></strong></P>
             <ul>
                 <li>NodeJS</li>
@@ -117,7 +117,7 @@
         </div>
         <div class="netlify">
             <div>
-                <img src="img/netlify.jpg" alt="linkki">
+                <a href="https://unruffled-raman-88f1f2.netlify.app/" target="_blank"><img src="img/netlify.jpg" alt="tannerkoskisivuehdotus"></a> 
            </div>
            <div>
            <h3><strong>Sivu ehdotus</strong></h3><br>
@@ -144,7 +144,7 @@
         </div>
         <div class="blackjack">
             <div>
-                <img src="img/blackjack.jpg" alt="linkki">
+                <a href="https://pensive-noether-b4c252.netlify.app/" target="_blank"><img src="img/blackjack.jpg" alt="blackjack"></a>
            </div>
            <div>
            <h3><strong>Ventti</strong></h3><br>
@@ -161,41 +161,46 @@
      <!-- projectit loppuu, yhteystiedot alkaa -->
     <section id="yhteystiedot">
         <h2>Yhteystiedot</h2>
-        <form class="otayhteytta" data-aos="fade-up"  data-aos-duration="2000">
+        <div class="nelio"></div>
+        <div class="nelio2"></div>
+        <form action="" method="" class="otayhteytta" data-aos="fade-up"  data-aos-duration="1000">
            <p>Haluatko jättää viestin?</p>
+           <!-- <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+           <input type="hidden" name="_subject" value="uusi viesti verkkosivuilta!"> -->
             <div>
-            <input type="text" id="etunimi" required><br>
-            <label for="etunimi">Etunimi</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label id="nimilabel" for="nimi">Etu ja sukunimi</label><br>
+            <p class="validoi" id="nimivaroitus"></p>
              </div>
-             <div>
-            <input type="text" id="sukunimi" required><br>
-            <label for="sukunimi">Sukunimi</label><br>
-        </div><div>
-            <input type="email" id="sähköposti" required><br>
-            <label for="sähköposti" >Sähköposti</label><br>
+            
+      <div>
+            <input type="email" id="email" name="email" required><br>
+            <label for="sähköposti" id="emaillabel">Sähköposti</label><br>
+            <p class="validoi" id="emailvaroitus"></p>
         </div>
         
             <textarea name="viesti" id="viesti" cols="20" rows="5" placeholder="viesti...." required></textarea ><br>
-            <input type="submit" value="Lähetä">
+            <input type="submit" value="Lähetä" id="submit">
             </form>
         
 
     </section>
     <div class="socialmedia">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github-square"></i></a>
+        <a href="https://www.linkedin.com/in/jarmo-lindstr%C3%B6n-519b051a4/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/LinkinWD" target="_blank"><i class="fab fa-github-square"></i></a>
     </div>
     <!-- yhteystiedot loppuu, footer -->
     <footer>
         <p>Linkin Web Desings</p>
         <img src="img/lin.svg" alt="logo">
-        <p>email:yaramodesu@gmail.com</p>
+        <p>email: yaramodesu@gmail.com</p>
         <p>&copy;Jarmo Lindström</p>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts/anime.min.js" ></script>
     
     <script src="scripts/slider.js"></script>
     <script src="scripts/animate.js"></script>
+    <script src="scripts/validointi.js"></script>
 </body>
 </html>

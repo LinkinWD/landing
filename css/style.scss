@@ -34,6 +34,7 @@ nav {
      z-index: 100;
     display: flex;
     justify-content: flex-end;
+    
     padding: 10px 30px;
    
     
@@ -378,25 +379,36 @@ h2 {
   .duunit {
   @include flexit();
   flex-wrap: wrap;
+ 
   div {
     color: $tumma-vihreä;
     margin: 30px;
+    
     li {
       list-style: none;
     }
   }
+  a {
+    
   img {
     width: 200px;
     height: 200px;
+    box-shadow: 8px 8px 30px $vihreä,
+                3px 3px 6px $tumma-vihreä;
   }
+  img:hover {
+    transform: translateY(-5px);
+  }}
   }
 }
 /* yhteystiedot osuus */
 #yhteystiedot {
-  background-color: $harmaa;
+  background: rgb(227,220,149);
+background: linear-gradient(0deg, rgba(227,220,194,1) 0%, rgba(227,220,149,1) 25%);
+  
   text-align: center;
   position: relative;
-  height: 90vh;
+  height: 80vh;
   h2 {
     padding: 20px;
     font-size: $otsikon-koko;
@@ -405,19 +417,48 @@ h2 {
   p {
     padding: 0 0 30px 0;
   }
- 
-  .otayhteytta {
+  .nelio {
+    height: 100px;
+    width: 100px;
+    
+    background-color: green;
     position: absolute;
-    background-color: $tumma-vihreä;
+    top: 40%;
+    left: 80%;
+    border-radius: 5px;
+  }
+  .nelio2 {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: blue;
+    position: absolute;
+    top: 60%;
+    left: 5vw;
+  }
+  .otayhteytta {
+    z-index: 10;
+    position: absolute;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 500px;
+    height: 420px;
     padding: 15px;
     width: 280px;
     border-radius: 10px;
     display: inline-block;
-    
+    @include flexit();
+    line-height: 0.8;
+    flex-direction: column;
+    p {
+      color: $tumma;
+    }
     input, textarea {
       
       padding: 5px;
@@ -434,25 +475,33 @@ h2 {
       position: absolute;
       font-size: 1.1rem;
       transform: translate(-50%,-37px) scale(0.8);
-      color: $tumma;
+      color: $vaalea-vihreä;
       transition: all .5s ease-out;
+      pointer-events: none;
+    }
+    .validoi {
+      margin-top: -18px;
+      font-size: .8rem;
+      color: red;
     }
     input:focus {
       border-bottom: 2px solid black;
     }
     input:focus ~ label{
       transform: translate(-50%,-70px);
-      color: $vaalea-vihreä;
+      color: $tumma;
     }
     textarea {
       font-family: 'Roboto', sans-serif;
       
     }
     input[type=submit] {
+      
       padding: 10px 30px;
-      background: $vaalea-vihreä;
-      color: $tumma;
+      background: $tumma;
+      color: $vaalea-vihreä;
       border-radius: 10px;
+      
     }
     input[type=submit]:hover {
       transform: scale(1.1);
@@ -480,7 +529,16 @@ h2 {
 footer {
   
   
-  color: white;
-  background-color: black;
+  color: $harmaa;
+  background-color: $tumma;
   padding: 20px;
+  @include flexit();
+  flex-direction: column;
+  p {
+    padding: 10px;
+  }
+  img {
+    height: 40px;
+    padding: 5px;
+  }
 }

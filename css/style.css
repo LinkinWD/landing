@@ -416,17 +416,26 @@ header #headerosuus .nappi button a {
   list-style: none;
 }
 
-#projektit .duunit img {
+#projektit .duunit a img {
   width: 200px;
   height: 200px;
+  -webkit-box-shadow: 8px 8px 30px #A6A867, 3px 3px 6px #51513D;
+          box-shadow: 8px 8px 30px #A6A867, 3px 3px 6px #51513D;
+}
+
+#projektit .duunit a img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 /* yhteystiedot osuus */
 #yhteystiedot {
-  background-color: #E3DCC2;
+  background: #e3dc95;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e3dcc2), color-stop(25%, #e3dc95));
+  background: linear-gradient(0deg, #e3dcc2 0%, #e3dc95 25%);
   text-align: center;
   position: relative;
-  height: 90vh;
+  height: 80vh;
 }
 
 #yhteystiedot h2 {
@@ -439,18 +448,63 @@ header #headerosuus .nappi button a {
   padding: 0 0 30px 0;
 }
 
-#yhteystiedot .otayhteytta {
+#yhteystiedot .nelio {
+  height: 100px;
+  width: 100px;
+  background-color: green;
   position: absolute;
-  background-color: #51513D;
+  top: 40%;
+  left: 80%;
+  border-radius: 5px;
+}
+
+#yhteystiedot .nelio2 {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: blue;
+  position: absolute;
+  top: 60%;
+  left: 5vw;
+}
+
+#yhteystiedot .otayhteytta {
+  z-index: 10;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 500px;
+  height: 420px;
   padding: 15px;
   width: 280px;
   border-radius: 10px;
   display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 0.8;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#yhteystiedot .otayhteytta p {
+  color: #1B2021;
 }
 
 #yhteystiedot .otayhteytta input, #yhteystiedot .otayhteytta textarea {
@@ -469,9 +523,16 @@ header #headerosuus .nappi button a {
   font-size: 1.1rem;
   -webkit-transform: translate(-50%, -37px) scale(0.8);
           transform: translate(-50%, -37px) scale(0.8);
-  color: #1B2021;
+  color: #E3DC95;
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
+  pointer-events: none;
+}
+
+#yhteystiedot .otayhteytta .validoi {
+  margin-top: -18px;
+  font-size: .8rem;
+  color: red;
 }
 
 #yhteystiedot .otayhteytta input:focus {
@@ -481,7 +542,7 @@ header #headerosuus .nappi button a {
 #yhteystiedot .otayhteytta input:focus ~ label {
   -webkit-transform: translate(-50%, -70px);
           transform: translate(-50%, -70px);
-  color: #E3DC95;
+  color: #1B2021;
 }
 
 #yhteystiedot .otayhteytta textarea {
@@ -490,8 +551,8 @@ header #headerosuus .nappi button a {
 
 #yhteystiedot .otayhteytta input[type=submit] {
   padding: 10px 30px;
-  background: #E3DC95;
-  color: #1B2021;
+  background: #1B2021;
+  color: #E3DC95;
   border-radius: 10px;
 }
 
@@ -533,8 +594,30 @@ header #headerosuus .nappi button a {
 
 /* footer osuus */
 footer {
-  color: white;
-  background-color: black;
+  color: #E3DCC2;
+  background-color: #1B2021;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer p {
+  padding: 10px;
+}
+
+footer img {
+  height: 40px;
+  padding: 5px;
 }
 /*# sourceMappingURL=style.css.map */
