@@ -34,7 +34,7 @@ anime({
     delay: 2500,
     duration: 1000,
     easing: 'spring(1, 80, 10, 0)',
-    loop: true
+    
   });
 
 

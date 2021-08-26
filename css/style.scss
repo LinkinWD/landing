@@ -358,9 +358,10 @@ h2 {
     width: 50%;
     border: 5px solid black;
     border-radius: 5px;
+    max-width: 800px;
   }
   i {
-    font-size: 2rem;
+    font-size: clamp(2rem, 8vw, 4rem);
     padding: 1em;
   }
 }
@@ -380,9 +381,15 @@ h2 {
   @include flexit();
   flex-wrap: wrap;
  
-  div {
+ 
+  .duuni  {
     color: $tumma-vihreä;
     margin: 30px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: inset 5px 5px 10px $vihreä,
+                inset 3px 3px 6px $tumma-vihreä;
+
     
     li {
       list-style: none;
@@ -424,7 +431,7 @@ background: linear-gradient(0deg, rgba(227,220,194,1) 0%, rgba(227,220,149,1) 25
     background-color: green;
     position: absolute;
     top: 40%;
-    left: 80%;
+    left: 66%;
     border-radius: 5px;
   }
   .nelio2 {
@@ -434,7 +441,7 @@ background: linear-gradient(0deg, rgba(227,220,194,1) 0%, rgba(227,220,149,1) 25
     background-color: blue;
     position: absolute;
     top: 60%;
-    left: 5vw;
+    left: 10%;
   }
   .otayhteytta {
     z-index: 10;
@@ -518,7 +525,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   font-size: 4rem;
   margin: 40px;
   i {
-    color: $tumma-vihreä;
+    color:purple;
   }}
   a:hover {
     transform: scale(1.1);
@@ -542,3 +549,124 @@ footer {
     padding: 5px;
   }
 }
+.piilota {
+  display: none;
+}
+
+
+/* mediaqueryt */
+@media only screen and (min-width: 400px) {
+  #yhteystiedot {
+    .nelio,
+    .nelio2 {
+      width:  150px;
+      height:  150px;
+    }
+    
+  }
+}
+@media only screen and (min-width: 600px) {
+  #omaesittely {
+    padding: 0 5vw;
+    .mina {
+      padding-top: 4vh;
+    }
+  }
+  #projektit {
+    
+    .duunit {
+      
+    }
+    .duuni {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      width: 460px;
+      margin: auto;
+      
+    }
+    
+  }
+  #yhteystiedot {
+    .nelio {
+      left: 55%;
+    }
+    .nelio2 {
+      left: 20%;
+    }
+  }
+}
+@media only screen and (min-width: 800px) {
+  nav {
+    justify-content: center;
+    background: $tumma-vihreä;
+    ul {
+    @include flexit();
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    li {
+      list-style: none;
+      
+      
+      a {
+      
+        text-decoration: none;
+        color: $harmaa;
+        font-size: 1.5rem;
+        box-shadow: 2px 2px 5px $tumma;
+        padding: 5px 10px;
+        border-radius: 2px;
+        
+      }
+    }
+    }
+    #hamppari {
+      display: none;
+     
+    }
+    .isonruudun {
+      display: block;
+      
+      
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #omaesittely {
+    padding: 0 10vw;
+  }
+
+  
+
+  #yhteystiedot {
+    .nelio2 {
+      left: 30%;
+    }
+  }
+  
+}
+@media only screen and (min-width: 1000px) {
+  #omaesittely {
+    padding: 0 15vw;
+  }
+  .duunit {
+    padding: 0 10vw;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  #omaesittely {
+    padding: 0 20vw;
+  }
+  #yhteystiedot {
+    .nelio2 {
+      left: 35%;
+    }
+  }}
+  @media only screen and (min-width: 1650px) {
+    #yhteystiedot {
+      .nelio2 {
+        left: 40%;
+      }
+    }}

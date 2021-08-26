@@ -372,10 +372,11 @@ header #headerosuus .nappi button a {
   width: 50%;
   border: 5px solid black;
   border-radius: 5px;
+  max-width: 800px;
 }
 
 #galleria .slider i {
-  font-size: 2rem;
+  font-size: clamp(2rem, 8vw, 4rem);
   padding: 1em;
 }
 
@@ -407,12 +408,16 @@ header #headerosuus .nappi button a {
       flex-wrap: wrap;
 }
 
-#projektit .duunit div {
+#projektit .duunit .duuni {
   color: #51513D;
   margin: 30px;
+  padding: 20px;
+  text-align: center;
+  -webkit-box-shadow: inset 5px 5px 10px #A6A867, inset 3px 3px 6px #51513D;
+          box-shadow: inset 5px 5px 10px #A6A867, inset 3px 3px 6px #51513D;
 }
 
-#projektit .duunit div li {
+#projektit .duunit .duuni li {
   list-style: none;
 }
 
@@ -454,7 +459,7 @@ header #headerosuus .nappi button a {
   background-color: green;
   position: absolute;
   top: 40%;
-  left: 80%;
+  left: 66%;
   border-radius: 5px;
 }
 
@@ -465,7 +470,7 @@ header #headerosuus .nappi button a {
   background-color: blue;
   position: absolute;
   top: 60%;
-  left: 5vw;
+  left: 10%;
 }
 
 #yhteystiedot .otayhteytta {
@@ -584,7 +589,7 @@ header #headerosuus .nappi button a {
 }
 
 .socialmedia a i {
-  color: #51513D;
+  color: purple;
 }
 
 .socialmedia a:hover {
@@ -619,5 +624,121 @@ footer p {
 footer img {
   height: 40px;
   padding: 5px;
+}
+
+.piilota {
+  display: none;
+}
+
+/* mediaqueryt */
+@media only screen and (min-width: 400px) {
+  #yhteystiedot .nelio,
+  #yhteystiedot .nelio2 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #omaesittely {
+    padding: 0 5vw;
+  }
+  #omaesittely .mina {
+    padding-top: 4vh;
+  }
+  #projektit .duuni {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 460px;
+    margin: auto;
+  }
+  #yhteystiedot .nelio {
+    left: 55%;
+  }
+  #yhteystiedot .nelio2 {
+    left: 20%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #51513D;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #E3DCC2;
+    font-size: 1.5rem;
+    -webkit-box-shadow: 2px 2px 5px #1B2021;
+            box-shadow: 2px 2px 5px #1B2021;
+    padding: 5px 10px;
+    border-radius: 2px;
+  }
+  nav #hamppari {
+    display: none;
+  }
+  nav .isonruudun {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #omaesittely {
+    padding: 0 10vw;
+  }
+  #yhteystiedot .nelio2 {
+    left: 30%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #omaesittely {
+    padding: 0 15vw;
+  }
+  .duunit {
+    padding: 0 10vw;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  #omaesittely {
+    padding: 0 20vw;
+  }
+  #yhteystiedot .nelio2 {
+    left: 35%;
+  }
+}
+
+@media only screen and (min-width: 1650px) {
+  #yhteystiedot .nelio2 {
+    left: 40%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
