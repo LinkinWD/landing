@@ -4,9 +4,9 @@
   align-items: center;
 }
 $harmaa: #E3DCC2;
-$vaalea-vihreä: #E3DC95;
-$vihreä: #A6A867;
-$tumma-vihreä: #51513D;
+$vaalea-vihrea: #E3DC95;
+$vihrea: #A6A867;
+$tumma-vihrea: #51513D;
 $tumma: #1B2021;
 $otsikon-koko : clamp(1.5rem, 3vw, 2rem);
 
@@ -21,7 +21,7 @@ html {
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background: $tumma-vihreä;
+    background: $tumma-vihrea;
     width: 100vw;
    color: $harmaa;
    line-height: 1.3;
@@ -171,7 +171,7 @@ nav {
       }
       a {
           text-decoration: none;
-          color: $vaalea-vihreä;
+          color: $vaalea-vihrea;
       }
   }
 }   
@@ -235,7 +235,7 @@ background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 
     h1 {
       z-index: 1;
       font-size: clamp(2.2em,8vw,5em);
-      color: $tumma-vihreä;
+      color: $tumma-vihrea;
     }
     .drop::before {
       content: '';
@@ -273,10 +273,10 @@ background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 
   /* pisarat loppuu */
     i {
       font-size: 4rem;
-      color: $tumma-vihreä;
+      color: $tumma-vihrea;
     }
   .nappi {
-    color: $tumma-vihreä;
+    color: $tumma-vihrea;
     width: 100%;
     
     button {
@@ -285,14 +285,14 @@ background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 
     margin-top: 1em;
     padding: 20px 10px;
     border-radius: 100%;
-    background-color: $tumma-vihreä;
+    background-color: $tumma-vihrea;
     ;
     
     a {
       font-size: 1.4rem;
       text-decoration: none;
       font-weight: 700;
-      color: $vaalea-vihreä;
+      color: $vaalea-vihrea;
       padding: 0 20px;
     }
     
@@ -300,12 +300,12 @@ background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 
 }
 }
 }
-
+/* tästä alkaa 'minä' esittely */
 #omaesittely {
   transition: 1s all ease-in-out;
   position: relative;
   width: 100vw;
-  background-color: $tumma-vihreä;
+  background-color: $tumma-vihrea;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -339,13 +339,21 @@ background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 
   min-height: 60vh;
   background: rgb(227,220,149);
   background: linear-gradient(0deg, rgba(227,220,149,1) 0%, rgba(81,81,61,1) 100%);
-
-h2, p {
+p,
+h2
+  {
   text-align: center;
-  margin-bottom: 2em;
- 
+  
+  color: $tumma;
+  
+  
+}
+p {
+
+  font-size: 1.2rem;
 }
 h2 {
+  padding-top: 2em;
   font-size: $otsikon-koko;
 }
 
@@ -369,43 +377,43 @@ h2 {
 /*Projekti osuus */
 #projektit {
   margin-top: -3px;
-  background: $vaalea-vihreä;
-  color: $tumma-vihreä;
+  background: $vaalea-vihrea;
+  color: $tumma-vihrea;
   h2 {
+    padding-top: 2em;
     padding: 10px;
     font-size: $otsikon-koko;
     text-align: center;
-    color: $tumma-vihreä
+    color: $tumma-vihrea
   }
   .duunit {
   @include flexit();
   flex-wrap: wrap;
- 
- 
-  .duuni  {
-    color: $tumma-vihreä;
-    margin: 30px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: inset 5px 5px 10px $vihreä,
-                inset 3px 3px 6px $tumma-vihreä;
+  
+      .duuni  {
+        color: $tumma-vihrea;
+        margin-top: 30px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: inset 5px 5px 30px $vihrea,
+                    inset 3px 3px 6px $tumma-vihrea;
 
-    
-    li {
-      list-style: none;
-    }
-  }
-  a {
-    
-  img {
-    width: 200px;
-    height: 200px;
-    box-shadow: 8px 8px 30px $vihreä,
-                3px 3px 6px $tumma-vihreä;
-  }
-  img:hover {
-    transform: translateY(-5px);
-  }}
+        
+        li {
+          list-style: none;
+        }
+      }
+      a {       
+        img {
+          width: 200px;
+          height: 200px;
+          box-shadow: 8px 8px 30px $vihrea,
+                      3px 3px 6px $tumma-vihrea;
+        }
+        img:hover {
+          transform: translateY(-5px);
+        }
+      }
   }
 }
 /* yhteystiedot osuus */
@@ -431,27 +439,29 @@ background: linear-gradient(0deg, rgba(227,220,194,1) 0%, rgba(227,220,149,1) 25
     background-color: green;
     position: absolute;
     top: 40%;
-    left: 66%;
-    border-radius: 5px;
+    left: 60%;
+    border-radius: 25px;
   }
   .nelio2 {
     height: 100px;
     width: 100px;
-    border-radius: 5px;
+    border-radius: 25px;
     background-color: blue;
     position: absolute;
     top: 60%;
     left: 10%;
   }
+
+  /* otayhteyttä formi */
   .otayhteytta {
     z-index: 10;
     position: absolute;
     background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -465,6 +475,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     flex-direction: column;
     p {
       color: $tumma;
+      font-size: 1.2rem;
     }
     input, textarea {
       
@@ -482,7 +493,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
       position: absolute;
       font-size: 1.1rem;
       transform: translate(-50%,-37px) scale(0.8);
-      color: $vaalea-vihreä;
+      color: $vihrea;
       transition: all .5s ease-out;
       pointer-events: none;
     }
@@ -506,7 +517,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
       
       padding: 10px 30px;
       background: $tumma;
-      color: $vaalea-vihreä;
+      color: $vaalea-vihrea;
       border-radius: 10px;
       
     }
@@ -573,10 +584,7 @@ footer {
     }
   }
   #projektit {
-    
-    .duunit {
-      
-    }
+       
     .duuni {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -584,13 +592,10 @@ footer {
       width: 460px;
       margin: auto;
       
-    }
-    
+    }  
   }
   #yhteystiedot {
-    .nelio {
-      left: 55%;
-    }
+    
     .nelio2 {
       left: 20%;
     }
@@ -599,7 +604,7 @@ footer {
 @media only screen and (min-width: 800px) {
   nav {
     justify-content: center;
-    background: $tumma-vihreä;
+    background: $tumma-vihrea;
     ul {
     @include flexit();
     justify-content: space-evenly;
@@ -637,22 +642,88 @@ footer {
   #omaesittely {
     padding: 0 10vw;
   }
-
   
 
   #yhteystiedot {
+    .otayhteytta {
+     
+      
+      height: 520px;
+      padding: 15px;
+      width: 380px;
+      border-radius: 10px;
+      display: inline-block;
+      @include flexit();
+      line-height: 0.8;
+      flex-direction: column;
+      p {
+        color: $tumma;
+        font-size: 1.8rem;
+      }
+      input, textarea {
+        
+        padding: 5px;
+        font-size: 1.5rem;
+        margin: 10px ;
+        width: auto;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        
+      }
+      label {
+        /* order: -1; */
+        position: absolute;
+        font-size: 1.5rem;
+        transform: translate(-50%,-37px) scale(0.8);
+        color: $vihrea;
+        transition: all .5s ease-out;
+        pointer-events: none;
+      }
+      .validoi {
+        margin-top: -18px;
+        font-size: 1.1rem;
+        color: red;
+      }
+      input:focus {
+        border-bottom: 2px solid black;
+      }
+      input:focus ~ label{
+        transform: translate(-50%,-70px);
+        color: $tumma;
+      }
+      textarea {
+        font-family: 'Roboto', sans-serif;
+        
+      }
+      input[type=submit] {
+        
+        padding: 10px 30px;
+        background: $tumma;
+        color: $vaalea-vihrea;
+        border-radius: 10px;
+        
+      }
+      input[type=submit]:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
     .nelio2 {
       left: 30%;
     }
   }
   
-}
+
 @media only screen and (min-width: 1000px) {
   #omaesittely {
     padding: 0 15vw;
   }
   .duunit {
     padding: 0 10vw;
+  }
+  .nelio2 {
+    left: 55%;
   }
 }
 @media only screen and (min-width: 1250px) {
