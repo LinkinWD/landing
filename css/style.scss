@@ -389,7 +389,14 @@ h2 {
   .duunit {
   @include flexit();
   flex-wrap: wrap;
-  
+  .duuni:last-child {
+    a{
+      pointer-events: none;
+    }
+
+    
+    
+  }
       .duuni  {
         color: $tumma-vihrea;
         margin-top: 30px;
@@ -403,7 +410,8 @@ h2 {
           list-style: none;
         }
       }
-      a {       
+      a {   
+        
         img {
           width: 200px;
           height: 200px;
@@ -414,6 +422,7 @@ h2 {
           transform: translateY(-5px);
         }
       }
+     
   }
 }
 /* yhteystiedot osuus */
@@ -622,6 +631,7 @@ footer {
         box-shadow: 2px 2px 5px $tumma;
         padding: 5px 10px;
         border-radius: 2px;
+       
         
       }
     }

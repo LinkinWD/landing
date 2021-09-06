@@ -416,6 +416,10 @@ header #headerosuus .nappi button a {
       flex-wrap: wrap;
 }
 
+#projektit .duunit .duuni:last-child a {
+  pointer-events: none;
+}
+
 #projektit .duunit .duuni {
   color: #51513D;
   margin-top: 30px;

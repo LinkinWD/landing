@@ -23,10 +23,10 @@ email.addEventListener('keyup', () => {
 
 
 function validateNimi(){
-    const regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    const regName = /^[a-öA-Ö]+ [a-öA-Ö]+$/;
     const nimiVaroitus = document.querySelector('#nimivaroitus')
     if(!regName.test(wholeName.value)){
-        nimiVaroitus.textContent =('Laittaisitko kokonimesi? (etu. ja sukunimi).');
+        nimiVaroitus.textContent =('Laittaisitko kokonimesi? (etu- ja sukunimi).');
         document.getElementById('name').focus();
         return false;
     } else {
@@ -43,12 +43,12 @@ function ValidateEmail() {
         emailVaroitus.textContent = '';
         return (true)
     }
-        emailVaroitus.textContent = ("Laita oikean sähköposti osoite!")
+        emailVaroitus.textContent = ("Laita oikea sähköposti osoite!")
         return (false)
 }
 
 submit.addEventListener('click', (e) => {
-    e.preventDefault()
+    /* e.preventDefault() */
     validateNimi()
     ValidateEmail()
 })
