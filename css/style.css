@@ -816,13 +816,16 @@ footer img {
     padding: 0 20vw;
   }
   #yhteystiedot .nelio2 {
-    left: 35%;
+    left: 30%;
   }
 }
 
 @media only screen and (min-width: 1650px) {
+  #yhteystiedot .nelio {
+    left: 55%;
+  }
   #yhteystiedot .nelio2 {
-    left: 40%;
+    left: 35%;
   }
 }
 /*# sourceMappingURL=style.css.map */
