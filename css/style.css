@@ -644,6 +644,78 @@ footer img {
   display: none;
 }
 
+/*kiitospalaute */
+.kiitoslaatikko {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #dedcce;
+  background: #e3dc95;
+  background: radial-gradient(circle, #e3dc95 8%, #a6a867 58%, #51513d 85%);
+}
+
+.kiitosviesti {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  background: #51513D;
+  text-align: center;
+  padding: 1em;
+  border-radius: 10px;
+  -webkit-box-shadow: 8px 8px 22px #1B2021;
+          box-shadow: 8px 8px 22px #1B2021;
+}
+
+.kiitosviesti h4 {
+  background: #A6A867;
+  padding: 4px 8px;
+  -webkit-box-shadow: 4px 4px 12px #1B2021;
+          box-shadow: 4px 4px 12px #1B2021;
+}
+
+.kiitosviesti button {
+  background: #1B2021;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  border: none;
+  -webkit-box-shadow: inset 3px 3px 8px white, inset -3px -3px 8px #E3DC95;
+          box-shadow: inset 3px 3px 8px white, inset -3px -3px 8px #E3DC95;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+.kiitosviesti button a {
+  text-decoration: none;
+  color: #E3DC95;
+}
+
+.kiitosviesti button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 /* mediaqueryt */
 @media only screen and (min-width: 400px) {
   #yhteystiedot .nelio,

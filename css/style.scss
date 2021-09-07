@@ -572,8 +572,58 @@ footer {
 .piilota {
   display: none;
 }
+/*kiitospalaute */
 
-
+.kiitoslaatikko {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: rgb(222,220,206);
+  background: rgb(227,220,149);
+  background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 58%, rgba(81,81,61,1) 85%);
+  
+    }
+  .kiitosviesti {
+    position: absolute;
+    @include flexit();
+    flex-direction: column;
+    font-size: $otsikon-koko;
+    justify-content: space-evenly;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: $tumma-vihrea;
+    text-align: center;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 8px 8px 22px $tumma;
+    h4 {
+      background: $vihrea;
+      padding: 4px 8px;
+      box-shadow: 4px 4px 12px $tumma;
+    }
+    button {
+      background: $tumma;
+      padding: 10px 30px;
+      font-size: 1.1rem;
+      border: none;
+      box-shadow: inset 3px 3px 8px white,
+                  inset -3px -3px 8px $vaalea-vihrea;
+      transition: .5s all;
+      a {
+        text-decoration: none;
+        color: $vaalea-vihrea;
+        
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
 /* mediaqueryt */
 @media only screen and (min-width: 400px) {
   #yhteystiedot {
@@ -749,7 +799,7 @@ footer {
       left: 30%;
     }
   }}
-  @media only screen and (min-width: 1650px) {
+@media only screen and (min-width: 1650px) {
     #yhteystiedot {
       .nelio {
         left: 55%;
