@@ -1,8 +1,7 @@
 
 
 
-const hamppari = document.querySelector('#hamppari');
-const navlinks = document.querySelector('.navlinks');
+
 const slider = document.querySelector('.slider')
 const seuraava = document.querySelector('#seuraava')
 const edellinen = document.querySelector("#edellinen")
@@ -24,10 +23,7 @@ const slides = [
 
 sliderinKuva.src = slides[dia]
 
-hamppari.addEventListener('click', () => {
-    hamppari.classList.toggle('avaa')
-    navlinks.classList.toggle('aukea')
-})
+
 
 seuraava.addEventListener('click', ()=> {
     

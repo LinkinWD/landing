@@ -9,6 +9,7 @@ $vihrea: #A6A867;
 $tumma-vihrea: #51513D;
 $tumma: #1B2021;
 $otsikon-koko : clamp(1.5rem, 3vw, 2rem);
+$tekstin-koko : clamp(1rem, 3vw, 1.5rem);
 
 
 *, *::after, *::before {
@@ -27,11 +28,14 @@ body {
    line-height: 1.3;
     
 }
+.normiteksti {
+  padding: 2em 10vw;;
+}
 
 nav {
      position: sticky;
      top: 0;
-     z-index: 100;
+    z-index: 2;
     display: flex;
     justify-content: flex-end;
     
@@ -150,31 +154,37 @@ nav {
 }
 
 .navlinks {
-  z-index: 100;
+  
  opacity: .8;
   width: 50%;
   height: 100%;  
  position: fixed;
- 
+ z-index: 16;
  background-color: $tumma;
  right: 0;
  transition: 0.5s all;
  transform: translateX(100%);
- ul {
-     
-  li{
-      padding: 15px 0px;
-      text-align: center;
-      list-style: none;
-      &:first-child {
-          margin-top: 20px;
+    ul {
+      z-index: 18;  
+      li{
+        
+          padding: 15px 0px;
+          text-align: center;
+          list-style: none;
+          &:first-child {
+              margin-top: 20px;
+              
+          }
+          a {
+            text-decoration: none;
+            color: $vaalea-vihrea;
+           }
+           &:hover {
+             transform: scale(1.2);
+           }
+          
       }
-      a {
-          text-decoration: none;
-          color: $vaalea-vihrea;
-      }
-  }
-}   
+    }   
 }
 .navlinks.aukea {
   transform: translateX(0px);
@@ -195,7 +205,7 @@ background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 
   align-items: center;
   flex-direction: column;
   .otsikko {
-    background-color: red;
+   /*  background-color: red; */
     position: relative;
     height: 100px;
     margin-bottom: 3em;
@@ -204,7 +214,7 @@ background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 
       
       img {   
         position: absolute;    
-        z-index: 100;
+        z-index: 2;
         width: 400px;
         top: 50%;
         left: 50%;
@@ -309,25 +319,23 @@ background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: $harmaa;;
-  
-  padding: 2em;
-
+  color: $harmaa;
         .mina {
           font-size: $otsikon-koko;
-          text-align: center;
+          text-align: center;   
           
-        
+        } 
         .omakuva {
           max-width: 275px;
           max-height: 300px;
           transition: all 1s ease-in-out; 
           border-radius: 50%;
+          margin: 1em;
         }
-        }
+        
         .kirjoitus {
-          padding: 2em;
-          font-size: clamp(1rem, 3vw, 1.5rem);
+          
+          font-size: $tekstin-koko;
         }
 
 }
@@ -335,25 +343,20 @@ background: radial-gradient(circle, rgba(227,220,149,1) 8%, rgba(166,168,103,1) 
 
    
 /* galleria osuus alkaa tästä */
+
 #galleria {
   min-height: 60vh;
   background: rgb(227,220,149);
   background: linear-gradient(0deg, rgba(227,220,149,1) 0%, rgba(81,81,61,1) 100%);
-p,
-h2
-  {
-  text-align: center;
-  
-  color: $tumma;
-  
-  
-}
-p {
 
-  font-size: 1.2rem;
+p {
+  
+  font-size: $tekstin-koko;
+  margin: 20px;
 }
 h2 {
-  padding-top: 2em;
+  text-align: center;
+  
   font-size: $otsikon-koko;
 }
 
@@ -371,6 +374,7 @@ h2 {
   i {
     font-size: clamp(2rem, 8vw, 4rem);
     padding: 1em;
+    color: $tumma;
   }
 }
 }
@@ -380,26 +384,23 @@ h2 {
   background: $vaalea-vihrea;
   color: $tumma-vihrea;
   h2 {
-    padding-top: 2em;
+    
     padding: 10px;
+    padding-top: 2em;
     font-size: $otsikon-koko;
     text-align: center;
     color: $tumma-vihrea
   }
+  p {
+    font-size: $tekstin-koko;
+  }
   .duunit {
   @include flexit();
   flex-wrap: wrap;
-  .duuni:last-child {
-    a{
-      pointer-events: none;
-    }
-
-    
-    
-  }
-      .duuni  {
+ 
+    .duuni  {
         color: $tumma-vihrea;
-        margin-top: 30px;
+        margin: 30px;
         padding: 20px;
         text-align: center;
         box-shadow: inset 5px 5px 30px $vihrea,
@@ -409,22 +410,24 @@ h2 {
         li {
           list-style: none;
         }
-      }
-      a {   
-        
-        img {
-          width: 200px;
-          height: 200px;
-          box-shadow: 8px 8px 30px $vihrea,
-                      3px 3px 6px $tumma-vihrea;
-        }
-        img:hover {
-          transform: translateY(-5px);
-        }
+      
+        a {   
+          
+          img {
+            width: 200px;
+            height: 200px;
+            box-shadow: 8px 8px 30px $vihrea,
+                        3px 3px 6px $tumma-vihrea;
+          }
+          img:hover {
+            transform: translateY(-5px);
+          }       
+        }  
+    }
       }
      
   }
-}
+
 /* yhteystiedot osuus */
 #yhteystiedot {
   background: rgb(227,220,149);
@@ -435,8 +438,10 @@ background: linear-gradient(0deg, rgba(227,220,194,1) 0%, rgba(227,220,149,1) 25
   height: 80vh;
   h2 {
     padding: 20px;
+    padding-top: 2em;
     font-size: $otsikon-koko;
     color: $tumma;
+    
   }
   p {
     padding: 0 0 30px 0;
@@ -637,7 +642,7 @@ footer {
 }
 @media only screen and (min-width: 600px) {
   #omaesittely {
-    padding: 0 5vw;
+    
     .mina {
       padding-top: 4vh;
     }
@@ -702,9 +707,7 @@ footer {
 }
 
 @media only screen and (min-width: 900px) {
-  #omaesittely {
-    padding: 0 10vw;
-  }
+ 
   
 
   #yhteystiedot {
@@ -779,7 +782,8 @@ footer {
   
 
 @media only screen and (min-width: 1000px) {
-  #omaesittely {
+  
+  .normiteksti {
     padding: 0 15vw;
   }
   .duunit {
@@ -790,7 +794,8 @@ footer {
   }
 }
 @media only screen and (min-width: 1250px) {
-  #omaesittely {
+ 
+  .normiteksti {
     padding: 0 20vw;
   }
   #yhteystiedot {
