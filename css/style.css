@@ -367,6 +367,7 @@ header #headerosuus .nappi button a {
 
 #galleria h2 {
   text-align: center;
+  margin-top: 2em;
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
@@ -438,7 +439,12 @@ header #headerosuus .nappi button a {
 }
 
 #projektit .duunit .duuni li {
+  font-size: 1.1rem;
   list-style: none;
+}
+
+#projektit .duunit .duuni p {
+  font-size: 1.1rem;
 }
 
 #projektit .duunit .duuni a img {
