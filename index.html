@@ -202,10 +202,13 @@
         <h2>Yhteystiedot</h2>
         <div class="nelio"></div>
         <div class="nelio2"></div>
-        <form action="https://formsubmit.co/yaramodesu@gmail.com" method="POST" class="otayhteytta" >
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="otayhteytta" >
+            <p class="hidden">
+    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+  </p>
            <p>Haluatko jättää viestin?</p>
            <input type="hidden" name="_next" value="https://linkinwd.fi/pages/kiitos.html">
-           <input type="hidden" name="_subject" value="uusi viesti verkkosivuilta!">
+           
             <div>
             <input type="text" id="name" name="name" required><br>
             <label id="nimilabel" for="nimi">Etu ja sukunimi</label><br>
